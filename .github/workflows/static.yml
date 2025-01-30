@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Machine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .counter-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    #counter {
+      font-size: 30px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="counter-container">
+    <button id="decrement">-</button>
+    <p id="counter">0</p>
+    <button id="increment">+</button>
+  </div>
+
+  <script>
+    let count = 0;
+
+    const counterDisplay = document.getElementById("counter");
+    const incrementButton = document.getElementById("increment");
+    const decrementButton = document.getElementById("decrement");
+
+    incrementButton.addEventListener("click", () => {
+      count++;
+      counterDisplay.textContent = count;
+    });
+
+    decrementButton.addEventListener("click", () => {
+      count--;
+      counterDisplay.textContent = count;
+    });
+  </script>
+</body>
+</html>
